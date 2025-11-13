@@ -14,9 +14,9 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [X] Create a branch called `assignment-two`.
+- [ X] Ensure that the repository is public.
+- [ X] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
 - [ ] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
@@ -55,7 +55,27 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
-```
+`Overwrite is type 1, which changes overwrite the old values, so if the bookstore only ever needs the current address in the CUSTOMER_ADDRESS table, we will have these variables below: 
+ 
+  (customer_id, 
+  address_line1 ,
+  address_line2 ,
+  city,
+  state,
+  postal_code,
+  country)
+But if it can retain changes, it is gonna be type 2, meaning it keeps historical versions. So in the CUSTOMER_ADDRESS table, the below variables will exist: 
+(customer_id,
+  address_line1,
+  address_line2,
+  city,
+  state,
+  postal_code,
+  country,
+  effective_from,
+  effective_to,
+  effective_date,
+  changed_by) 
 
 ***
 
@@ -184,4 +204,4 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
-```
+The article suggests the myth: “The model did it” when in fact underpaid people did, because it suggested that many of the systems we treat as automated are underpinned by human work. The story implies that automated systems make those human workers invisible and may shift human labour behind the scenes. Which means their labour condition are unethical. From another point of view, there is a risk of human biases because those were humans who decided which data to include and which ones to exclude. As a result, humans inadvertently induce biases during their data collection for Neural nets or large language models. To remedy this, it is necessary to value the human labour in the process that we have vast access to computers, which can understand the dimensions of a hot dog! Use them with responsibility and also the vulnerability that makes these technologies possible.
